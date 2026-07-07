@@ -122,18 +122,12 @@ FN(실제 1인데 0으로 예측) 9개 기업을 SHAP로 개별 분석:
 
 ```
 ├── README.md
-├── data/
-│   ├── 라벨포함.csv            # 메인 입력: 2024년 재무비율 + 라벨 81개
-│   ├── test36.csv              # 23년 외부검증용 36개 기업
-│   └── 23계속기업.csv          # 23년 라벨링 근거 (감사의견·계속기업 문단 여부)
-├── docs/
-│   └── presentation.pdf        # 최종 발표 자료
 ├── images/                     # 결과 이미지 (노트북 출력)
 └── notebooks/
     └── BA_project.ipynb        # 메인 파이프라인 (train/test 분리 + SHAP)
 ```
 
-메인 노트북은 [Google Colab에서 바로 열기](https://colab.research.google.com/drive/10IBjSchHlI2xqlR71X7JyXrAEelGX3Sm?usp=sharing)로 실행 흐름을 확인할 수 있습니다. (노트북 내 데이터 경로는 Colab 기준 `/content/` — 로컬 실행 시 `data/` 경로로 변경)
+메인 노트북은 [Google Colab에서 바로 열기](https://colab.research.google.com/drive/10IBjSchHlI2xqlR71X7JyXrAEelGX3Sm?usp=sharing)로 실행 흐름을 확인할 수 있습니다.
 
 > 초기 버전은 PowerTransformer를 전체 데이터에 적합시키고 학습에 사용한 라벨로 평가하는 데이터 누수 문제가 있어, 라벨 81개 중 17개를 hold-out으로 분리하고 변환기·모델을 train에만 적합시킨 현재 버전으로 교체했습니다.
 

@@ -128,11 +128,3 @@ FN(실제 1인데 0으로 예측) 10개 기업을 SHAP로 개별 분석:
 ```
 
 메인 노트북은 [Google Colab에서 바로 열기](https://colab.research.google.com/drive/10IBjSchHlI2xqlR71X7JyXrAEelGX3Sm?usp=sharing)로 실행 흐름을 확인할 수 있습니다.
-
-> 초기 버전은 PowerTransformer를 전체 데이터에 적합시키고 학습에 사용한 라벨로 평가하는 데이터 누수 문제가 있어, 라벨 81개 중 17개를 hold-out으로 분리하고 변환기·모델을 train에만 적합시킨 현재 버전으로 교체했습니다.
->
-> 또한 pseudo-labeling 단계에서 원래 순서대로면 사람이 직접 부여한 정답(81개)이 Label Spreading의 cutoff로 되레 뒤집힐 수 있는 로직 버그가 있었습니다 (`(주)드래곤플라이`가 원 라벨 1인데도 pseudo-label 0으로 덮어써짐). cutoff를 먼저 적용하고 원 라벨이 마지막에 항상 이기도록 순서를 고쳐 재계산했습니다.
-
-## 기술 스택
-
-`Python` · `pandas` · `scikit-learn` (LabelSpreading, PowerTransformer) · `XGBoost` · `SHAP` · `matplotlib`

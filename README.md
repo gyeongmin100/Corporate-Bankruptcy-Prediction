@@ -127,5 +127,3 @@ FN(실제 1인데 0으로 예측) 8개 기업을 SHAP로 개별 분석:
 └── notebooks/
     └── BA_project.ipynb        # 메인 파이프라인 (train/test 분리 + SHAP)
 ```
-
-메인 노트북은 [Google Colab에서 바로 열기](https://colab.research.google.com/drive/10IBjSchHlI2xqlR71X7JyXrAEelGX3Sm?usp=sharing)로 실행 흐름을 확인할 수 있습니다.
